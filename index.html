@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Full-stack developer</title>
+  <meta name="description" content="Portfolio of Your Name, a full-stack developer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo" href="#top">Your Name</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav id="nav" aria-label="Main">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-btn" type="button">Dark mode</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div>
+        <h1>I build the whole request, from button to database.</h1>
+        <p class="lead">I'm a full-stack developer who designs interfaces, writes APIs and models the data behind them.</p>
+        <div class="actions">
+          <a class="btn" href="#projects">View projects</a>
+          <a class="btn btn-outline" href="#contact">Contact me</a>
+        </div>
+      </div>
+
+      <div class="stack" aria-label="Demo of a request moving through the stack">
+        <ol>
+          <li class="layer">
+            <strong>Browser</strong>
+            <code>fetch('/api/developer')</code>
+          </li>
+          <li class="layer">
+            <strong>API server</strong>
+            <code>app.get('/api/developer', handler)</code>
+          </li>
+          <li class="layer">
+            <strong>Database</strong>
+            <code>SELECT * FROM developers LIMIT 1;</code>
+          </li>
+        </ol>
+        <button class="btn run-btn" type="button">Send request</button>
+        <pre class="response" aria-live="polite">Press "Send request" to run this simulated call.</pre>
+      </div>
+    </section>
+
+    <section id="projects" class="wrap">
+      <h2>Projects</h2>
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="frontend" aria-pressed="false">Front end</button>
+        <button type="button" data-filter="backend" aria-pressed="false">Back end</button>
+        <button type="button" data-filter="fullstack" aria-pressed="false">Full stack</button>
+      </div>
+
+      <div class="projects">
+        <article class="project" data-type="fullstack">
+          <h3>Shop platform</h3>
+          <p>Online store with product search, a cart, checkout and an admin dashboard for orders.</p>
+          <p class="tech">React, Node.js, PostgreSQL, Stripe</p>
+          <p class="links"><a href="#" data-placeholder>Live demo</a> <a href="#" data-placeholder>Source code</a></p>
+        </article>
+        <article class="project" data-type="fullstack">
+          <h3>Team task board</h3>
+          <p>Shared board where cards move between columns and update for everyone in real time.</p>
+          <p class="tech">Vue, Express, Socket.IO, MongoDB</p>
+          <p class="links"><a href="#" data-placeholder>Live demo</a> <a href="#" data-placeholder>Source code</a></p>
+        </article>
+        <article class="project" data-type="backend">
+          <h3>Authentication API</h3>
+          <p>REST service for sign-up, login, password reset and role-based access, with rate limiting.</p>
+          <p class="tech">Node.js, Express, Redis, JWT</p>
+          <p class="links"><a href="#" data-placeholder>API docs</a> <a href="#" data-placeholder>Source code</a></p>
+        </article>
+        <article class="project" data-type="frontend">
+          <h3>Weather dashboard</h3>
+          <p>Responsive dashboard with city search, saved locations and a week-long forecast.</p>
+          <p class="tech">HTML, CSS, JavaScript, REST API</p>
+          <p class="links"><a href="#" data-placeholder>Live demo</a> <a href="#" data-placeholder>Source code</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="wrap">
+      <h2>Skills</h2>
+      <dl class="rows">
+        <div><dt>Front end</dt><dd>HTML, CSS, JavaScript, TypeScript, React</dd></div>
+        <div><dt>Back end</dt><dd>Node.js, Express, Python, REST, GraphQL</dd></div>
+        <div><dt>Data</dt><dd>PostgreSQL, MongoDB, Redis</dd></div>
+        <div><dt>Tools</dt><dd>Git, Docker, GitHub Actions, AWS</dd></div>
+      </dl>
+    </section>
+
+    <section id="experience" class="wrap">
+      <h2>Experience</h2>
+      <dl class="rows">
+        <div><dt>2024 to present</dt><dd><h3>Full-stack developer, Company Name</h3><p>Build and maintain customer-facing features across the React front end and Node.js services.</p></dd></div>
+        <div><dt>2022 to 2024</dt><dd><h3>Web developer, Company Name</h3><p>Delivered responsive websites and integrated third-party APIs for client projects.</p></dd></div>
+        <div><dt>2018 to 2022</dt><dd><h3>B.E. Computer Science, College Name</h3><p>Studied data structures, databases, networks and software engineering.</p></dd></div>
+      </dl>
+    </section>
+
+    <section id="contact" class="wrap contact">
+      <div>
+        <h2>Contact</h2>
+        <p>Tell me about your project or role.</p>
+        <p><a href="mailto:you@example.com">you@example.com</a></p>
+        <p class="links"><a href="#" data-placeholder>GitHub</a> <a href="#" data-placeholder>LinkedIn</a></p>
+      </div>
+      <form id="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" autocomplete="name" required>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button class="btn" type="submit">Open email draft</button>
+        <p class="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>&copy; <span id="year"></span> Your Name</p>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
